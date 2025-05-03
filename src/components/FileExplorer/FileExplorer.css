@@ -1,0 +1,84 @@
+.file-explorer {
+  display: flex;
+  height: calc(100vh - 60px);
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 300px;
+  background: #f5f5f5;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.folder-item,
+.file-item {
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-item:hover,
+.file-item:hover {
+  background-color: #e0e0e0;
+}
+
+.selected {
+  background-color: #d4e6f1;
+  font-weight: bold;
+}
+
+.folder-children {
+  margin-left: 15px;
+}
+
+.folder-actions,
+.file-actions {
+  display: none;
+  gap: 5px;
+}
+
+.folder-item:hover .folder-actions,
+.file-item:hover .file-actions {
+  display: flex;
+}
+
+.folder-actions button,
+.file-actions button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.folder-actions button:hover,
+.file-actions button:hover {
+  background-color: #ddd;
+}
+
+.context-menu {
+  position: fixed;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.context-menu div {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.context-menu div:hover {
+  background-color: #f0f0f0;
+}
